@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4d90f7-4db7-47ec-acce-e3a3a62077f6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/css/bulma-tagsinput.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/bulma-tagsinput.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/sass/bulma-tagsinput.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/bulma-tooltip.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index/dashboard.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/index/dashboard.handlebars" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/layouts/main.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.handlebars" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/scholar/addNew.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/scholar/addNew.handlebars" afterDir="false" />
     </list>
@@ -52,8 +48,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/scholar/addNew.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+            <state relative-caret-position="299">
+              <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -61,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+            <state relative-caret-position="161">
+              <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
             </state>
           </provider>
         </entry>
@@ -99,13 +95,14 @@
         <option value="$PROJECT_DIR$/public/css/bulma-tagsinput.min.css" />
         <option value="$PROJECT_DIR$/public/sass/bulma-tagsinput.sass" />
         <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/public/css/bulma-tooltip.min.css" />
         <option value="$PROJECT_DIR$/views/layouts/main.handlebars" />
         <option value="$PROJECT_DIR$/views/scholar/addNew.handlebars" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -248,12 +245,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551411561595</updated>
-      <workItem from="1551411562795" duration="9045000" />
+      <workItem from="1551411562795" duration="9565000" />
     </task>
+    <task id="LOCAL-00001" summary="Created a tagging system">
+      <created>1551423005003</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1551423005004</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9045000" />
+    <option name="totallyTimeSpent" value="9565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -261,11 +266,11 @@
     <layout>
       <window_info id="npm" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12693334" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12693334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Tail" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" weight="0.3290398" />
+      <window_info active="true" anchor="bottom" id="Version Control" visible="true" weight="0.32882884" />
       <window_info anchor="bottom" id="Terminal" weight="0.33957845" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -305,6 +310,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created a tagging system" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created a tagging system" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.stylelintrc.json">
@@ -434,13 +443,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="28" column="26" lean-forward="true" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/index/dashboard.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -448,10 +450,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bulma-tooltip.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="45059" selection-start-column="45059" selection-end-column="45059" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="87" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/scholar/addNew.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="80" column="39" selection-start-line="80" selection-start-column="39" selection-end-line="80" selection-end-column="39" />
+        <state relative-caret-position="299">
+          <caret line="35" column="73" selection-start-line="35" selection-start-column="73" selection-end-line="35" selection-end-column="73" />
         </state>
       </provider>
     </entry>
