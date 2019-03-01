@@ -11,7 +11,8 @@ router.get('/', function(req, res, next) {
 /* GET Add New Scholar . */
 router.get('/scholar/new', function(req, res, next) {
   res.render('scholar/addNew', {
-    title: 'SCHOLAR IO'
+    title: 'SCHOLAR IO',
+    tags: true
   });
 });
 

@@ -4,6 +4,7 @@
     <title>{{title}}</title>
     <link rel='stylesheet' href='../../../../css/bulma.css' />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    {{#if tags}}<link rel="stylesheet" href="../../../../css/bulma-tagsinput.min.css">{{/if}}
     <style>
       @import url('https://fonts.googleapis.com/css?family=Cinzel:400,700&subset=latin-ext');
       body {
@@ -13,7 +14,19 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 2.25rem;
         font-weight: 500}
+      .is-groovy {
+        background-image: linear-gradient(141deg, #49349a 0%, #6b20dc 71%, #8f32f5 100%);
+      }
+      .is-groovy .title,
+      .is-groovy .subtitle {
+        color: #fbf8f8
+      }
     </style>
   </head>
   {{{body}}}
+  {{#if tags}}<script src="../../../../js/bulma-tagsinput.min.js"></script>
+<script>
+  bulmaTagsinput.attach();
+</script>
+  {{/if}}
 </html>
