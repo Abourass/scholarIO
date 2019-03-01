@@ -28,11 +28,22 @@
     </style>
   </head>
   {{{body}}}
+<div class="is-script-footer">
+<script src="https://cdn.jsdelivr.net/npm/bulma-toast@1/dist/bulma-toast.min.js"></script>
+{{#if error_msg}}
+<script>
+  bulmaToast.toast({message:{{error_msg}}, type: "is-danger" });
+</script>
+{{else if success_msg}}
+  <script>
+    bulmaToast.toast({message:{{success_msg}}, type: "is-success" });
+  </script>
+{{/if}}
 {{#if tags}}
 <script src="https://cdn.jsdelivr.net/npm/bulma-tagsinput@2/dist/js/bulma-tagsinput.min.js"></script>
 <script>
   bulmaTagsinput.attach();
 </script>
   {{/if}}
-<script src="https://cdn.jsdelivr.net/npm/bulma-toast@1/dist/bulma-toast.min.js"></script>
+</div>
 </html>

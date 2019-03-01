@@ -4,7 +4,7 @@
   <div class="hero-body">
     <div class="container has-text-centered">
       <h1 class="title">
-        Create a Record
+        Create Records
       </h1>
       <h2 class="subtitle">
         Build Knowledge
@@ -18,85 +18,85 @@
     <input type="hidden" name="_csrf" value="{{csrfToken}}">
     <div class="columns">
       <div class="column">
-      <div class="field">
-        <label class="label">Article Title</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Article Title" name="articleTitle">
+        <div class="field">
+          <label class="label">Article Title</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Article Title" name="articleTitle" value="{{articleTitle}}">
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">Edition</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Edition" name="edition">
+        <div class="field">
+          <label class="label">Edition</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Edition" name="edition" value="{{edition}}">
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">DOI</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="DOI" name="doi">
+        <div class="field">
+          <label class="label">DOI</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="DOI" name="doi" value="{{doi}}">
+          </div>
         </div>
-      </div>
-      <div class="field tooltip is-tooltip-left" data-tooltip="Enter author name followed by comma">
-        <label class="label">Author(s)</label>
-        <div class="control">
-          <input class="input" type="tags" placeholder="Author(s)" name="authors">
+        <div class="field tooltip is-tooltip-left" data-tooltip="Enter author name followed by comma">
+          <label class="label">Author(s)</label>
+          <div class="control">
+            <input class="input" type="tags" placeholder="Author(s)" name="authors" value="{{authors}}">
+          </div>
+          <br/>
         </div>
-        <br/>
-      </div>
       </div>
       <div class="column">
-      <div class="field">
-        <label class="label">Publication Title</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Publication Title" name="pubTitle">
+        <div class="field">
+          <label class="label">Publication Title</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Publication Title" name="pubTitle" value="{{pubTitle}}">
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">Year Published</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Year" name="yearPublished">
+        <div class="field">
+          <label class="label">Year Published</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Year" name="yearPublished" value="{{yearPublished}}">
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">Publisher</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Publisher" name="publisher">
+        <div class="field">
+          <label class="label">Publisher</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Publisher" name="publisher" value="{{publisher}}">
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">Publication Location</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Publication Location" name="pubLocation">
+        <div class="field">
+          <label class="label">Publication Location</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="Publication Location" name="pubLocation" value="{{pubLocation}}">
+          </div>
         </div>
-      </div>
       </div>
       <div class="column">
-      <div class="field">
-        <label class="label">ISBN10</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="ISBN10" name="isbn10">
+        <div class="field">
+          <label class="label">ISBN10</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="ISBN10" name="isbn10" value="{{isbn10}}">
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <label class="label">ISBN13</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="ISBN13" name="isbn13">
+        <div class="field">
+          <label class="label">ISBN13</label>
+          <div class="control">
+            <input class="input" type="text" placeholder="ISBN13" name="isbn13" value="{{isbn13}}">
+          </div>
         </div>
-      </div>
-      <div class="field tooltip is-tooltip-left" data-tooltip="Please enter a tag followed by comma">
-        <label class="label">Tags</label>
-        <div class="control">
-          <input class="input" type="tags" placeholder="tags" name="tags">
+        <div class="field tooltip is-tooltip-left" data-tooltip="Please enter a tag followed by comma">
+          <label class="label">Tags</label>
+          <div class="control">
+            <input class="input" type="tags" placeholder="tags" name="tags" value="{{tagValues}}">
+          </div>
         </div>
-      </div>
       </div>
     </div>
-      <div class="field">
-        <label class="label">Description</label>
-        <div class="control">
-          <textarea class="textarea" name="description" placeholder="Description"></textarea>
-        </div>
+    <div class="field">
+      <label class="label">Description</label>
+      <div class="control">
+        <textarea class="textarea" name="description" placeholder="Description" value="{{description}}"></textarea>
       </div>
+    </div>
     <div class="field is-grouped">
       <div class="control">
         <button class="button is-link">Submit</button>

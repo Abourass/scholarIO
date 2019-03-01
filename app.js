@@ -69,12 +69,10 @@ app.use(flash()); // ===============================================> Flash Mess
 app.use((req, res, next) => { // ===================================> Set Global Variables <===================================
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
-  res.locals.error = req.flash('error');
   res.locals.user = req.user || null;
   next();
 });
 app.use(express.static(path.join(__dirname, 'public'))); // ==========> Set static folders <===================================
-
 app.use('/', index); // ==============================================> Use Routes <===========================================
 
 function normalizePort(val) { // ------------------------------> Normalize a port into a number, string, or false. <-----------
@@ -90,7 +88,7 @@ const server = http.createServer(app); // ===========================> Create HT
 function onListening() { // -----------------------------------> Event listener for HTTP server "listening" event <------------
   const addr = server.address();
   const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
-  console.log(`Development run on http://${ip.address()}:${port} | You know what to do ♥`);
+  console.log(`Running on http://${ip.address()}:${port} | You know what to do ♥`);
   debug(`Development run on http://${ip.address()}:${port} | You know what to do ♥`);
 }
 server.listen(port); // ---------------------------------------> Listen on provided port <--------------------------------------

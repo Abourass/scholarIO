@@ -34,7 +34,7 @@ const ScholarSchema = new Schema({
   isbn13: {
     type: String,
   },
-  tags: {
+  tagValues: {
     type: Array,
   },
   description: {
