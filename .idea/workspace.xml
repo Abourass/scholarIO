@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a4d90f7-4db7-47ec-acce-e3a3a62077f6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -52,11 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-1196">
               <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -94,7 +102,6 @@
         <option value="$PROJECT_DIR$/modules/incSequence.js" />
         <option value="$PROJECT_DIR$/views/errorSystem/404.handlebars" />
         <option value="$PROJECT_DIR$/views/partials/_navigation.handlebars" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/views/index/dashboard.handlebars" />
         <option value="$PROJECT_DIR$/public/js/bulma-tagsinput.min.js" />
         <option value="$PROJECT_DIR$/public/css/bulma-tagsinput.min.css" />
@@ -107,6 +114,7 @@
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/scholar/addNew.handlebars" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -218,7 +226,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551411561595</updated>
       <workItem from="1551411562795" duration="9565000" />
-      <workItem from="1551459406476" duration="2524000" />
+      <workItem from="1551459406476" duration="2816000" />
     </task>
     <task id="LOCAL-00001" summary="Created a tagging system">
       <created>1551423005003</created>
@@ -241,17 +249,24 @@
       <option name="project" value="LOCAL" />
       <updated>1551461822823</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Remvoed private tag">
+      <created>1551461954268</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1551461954268</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12089000" />
+    <option name="totallyTimeSpent" value="12381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.128" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -328,7 +343,8 @@
     <MESSAGE value="Created a tagging system" />
     <MESSAGE value="Routes and Schema are live" />
     <MESSAGE value="Fixed missing form action and csrf token" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed missing form action and csrf token" />
+    <MESSAGE value="Remvoed private tag" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remvoed private tag" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.stylelintrc.json">
@@ -381,13 +397,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/user/profile.handlebars">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/bulma-tagsinput.min.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -491,6 +500,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1196">
           <caret line="8" column="48" lean-forward="true" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
