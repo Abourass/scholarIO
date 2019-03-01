@@ -27,7 +27,7 @@ router.get('/scholar/new', csrfProtection, (req, res, next) => {
 });
 
 /* POST New Scholar */
-router.post('scholar/add', csrfProtection, (req, res, next) => {
+router.post('/scholar/add', csrfProtection, (req, res, next) => {
   Scholar.findOne({doi: req.body.doi})
   .then(scholar => {
     if (scholar) {
