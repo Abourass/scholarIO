@@ -64,10 +64,12 @@ router.post('/scholar/add', csrfProtection, (req, res, next) => {
         tagValues: req.body.tags,
         description: req.body.description,
         csrfToken: req.csrfToken(),
-        title: 'SCHOLAR IO'
+        title: 'SCHOLAR IO',
+        tags: true,
+        err: true,
+        err_msg: 'That DOI has been previously recorded'
       });
     } else if (req.body.pubTitle.length <= 0) {
-      req.flash('error_msg', 'You must provide a title for the record');
       res.render('scholar/addNew', {
         articleTitle: req.body.articleTitle,
         edition: req.body.edition,
@@ -82,7 +84,10 @@ router.post('/scholar/add', csrfProtection, (req, res, next) => {
         tagValues: req.body.tags,
         description: req.body.description,
         csrfToken: req.csrfToken(),
-        title: 'SCHOLAR IO'
+        title: 'SCHOLAR IO',
+        tags: true,
+        err: true,
+        err_msg: 'You must provide a title for the record'
       });
   } else {
       const newScholar = new Scholar({

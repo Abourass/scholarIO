@@ -32,11 +32,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bulma-toast@1/dist/bulma-toast.min.js"></script>
 {{#if error_msg}}
 <script>
-  bulmaToast.toast({message:{{error_msg}}, type: "is-danger" });
+  bulmaToast.toast({message:'{{error_msg}}', type: "is-danger" });
 </script>
 {{else if success_msg}}
   <script>
-    bulmaToast.toast({message:{{success_msg}}, type: "is-success" });
+    bulmaToast.toast({message:'{{success_msg}}', type: "is-success" });
+  </script>
+{{else if err}}
+  <script>
+    bulmaToast.toast({message:'{{err_msg}}', type: "is-danger" });
   </script>
 {{/if}}
 {{#if tags}}
