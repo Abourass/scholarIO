@@ -5,6 +5,7 @@
     <link rel='stylesheet' href='../../../../css/bulma.min.css' />
     <link rel="stylesheet" href="../../../../css/bulma-tooltip.min.css" />
     <link rel="stylesheet" href="../../../../css/icons.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet" />
     {{#if tags}}<link rel="stylesheet" href="../../../../css/bulma-tagsinput.min.css" />{{/if}}
     <style>
@@ -36,11 +37,30 @@
 </script>
 {{else if success_msg}}
   <script>
-    bulmaToast.toast({message:'{{success_msg}}', type: "is-success" });
+    bulmaToast.toast({
+      message:'<i class="slim-happy-smiley-streamline" style="padding-right: 8px; margin-right: 1px;"></i> {{success_msg}}',
+      type: "is-success",
+      duration: 3000,
+      position: "top-right",
+      animate: { in: 'fadeIn', out: 'fadeOut' } });
   </script>
-{{else if err}}
+{{else if err_toast}}
   <script>
-    bulmaToast.toast({message:'{{err_msg}}', type: "is-danger" });
+    bulmaToast.toast({
+      message:'<i class="slim-finger-fuck" style="padding-right: 8px; margin-right: 1px;"></i> {{err_msg}}',
+      type: "is-danger",
+      duration: 3000,
+      position: "top-right",
+      animate: { in: 'fadeIn', out: 'fadeOut' } });
+  </script>
+{{else if success_toast}}
+  <script>
+    bulmaToast.toast({
+      message:'<i class="slim-happy-smiley-streamline" style="padding-right: 8px; margin-right: 1px;"></i> {{succ_msg}}',
+      type: "is-success",
+      duration: 3000,
+      position: "top-right",
+      animate: { in: 'fadeIn', out: 'fadeOut' } });
   </script>
 {{/if}}
 {{#if tags}}

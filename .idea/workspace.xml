@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a4d90f7-4db7-47ec-acce-e3a3a62077f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/scholar/addNew.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/scholar/addNew.handlebars" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/scholar/records.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/scholar/records.handlebars" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/layouts/main.handlebars" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/main.handlebars" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,8 +20,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+            <state relative-caret-position="-928">
+              <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -29,13 +29,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="69" column="46" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="46" />
+            <state relative-caret-position="368">
+              <caret line="71" column="37" lean-forward="true" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/scholar/records.handlebars">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="115">
@@ -50,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/scholar/addNew.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="27" lean-forward="true" selection-start-line="4" selection-end-line="9" selection-end-column="10" />
+            <state relative-caret-position="253">
+              <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
               <folding>
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
               </folding>
@@ -59,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="38" column="45" lean-forward="true" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
+            <state relative-caret-position="375">
+              <caret line="40" column="116" selection-start-line="40" selection-start-column="116" selection-end-line="40" selection-end-column="116" />
             </state>
           </provider>
         </entry>
@@ -112,10 +112,10 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/schema/Scholar.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/layouts/main.handlebars" />
         <option value="$PROJECT_DIR$/views/scholar/addNew.handlebars" />
         <option value="$PROJECT_DIR$/views/scholar/records.handlebars" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
+        <option value="$PROJECT_DIR$/views/layouts/main.handlebars" />
       </list>
     </option>
   </component>
@@ -239,7 +239,7 @@
       <option name="presentableId" value="Default" />
       <updated>1551411561595</updated>
       <workItem from="1551411562795" duration="9565000" />
-      <workItem from="1551459406476" duration="11963000" />
+      <workItem from="1551459406476" duration="12881000" />
     </task>
     <task id="LOCAL-00001" summary="Created a tagging system">
       <created>1551423005003</created>
@@ -311,17 +311,38 @@
       <option name="project" value="LOCAL" />
       <updated>1551471294666</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Adding More Icons">
+      <created>1551471892761</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1551471892761</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Adding More Icons">
+      <created>1551471906252</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551471906252</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Toast should work now">
+      <created>1551472263158</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1551472263158</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21528000" />
+    <option name="totallyTimeSpent" value="22446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.128" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.128" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -334,7 +355,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Tail" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32845894" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32845894" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.33858266" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -402,7 +423,9 @@
     <MESSAGE value="Getting rid of .ideas" />
     <MESSAGE value="Visual Change" />
     <MESSAGE value="Adding Icons" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding Icons" />
+    <MESSAGE value="Adding More Icons" />
+    <MESSAGE value="Toast should work now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Toast should work now" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.stylelintrc.json">
@@ -526,13 +549,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="69" column="46" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -547,34 +563,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/partials/_navigation.handlebars">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="38" column="45" lean-forward="true" selection-start-line="38" selection-start-column="45" selection-end-line="38" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/scholar/addNew.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="27" lean-forward="true" selection-start-line="4" selection-end-line="9" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="368">
+          <caret line="71" column="37" lean-forward="true" selection-start-line="71" selection-start-column="37" selection-end-line="71" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -585,6 +577,37 @@
           <folding>
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/scholar/addNew.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#0;n#section#0;n#body#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/_navigation.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="19" column="8" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-928">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="40" column="116" selection-start-line="40" selection-start-column="116" selection-end-line="40" selection-end-column="116" />
         </state>
       </provider>
     </entry>

@@ -49,7 +49,6 @@ router.post('/scholar/add', csrfProtection, (req, res, next) => {
   Scholar.findOne({doi: req.body.doi})
   .then(scholar => {
     if (scholar) {
-      req.flash('error_msg', ' That DOI has been previously recorded.');
       res.render('scholar/addNew', {
         articleTitle: req.body.articleTitle,
         edition: req.body.edition,
