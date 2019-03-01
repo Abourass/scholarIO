@@ -4,10 +4,10 @@
     <title>{{title}}</title>
     <link rel='stylesheet' href='../../../../css/bulma.min.css' />
     <link rel="stylesheet" href="../../../../css/bulma-tooltip.min.css" />
+    <link rel="stylesheet" href="../../../../css/icons.css" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet" />
     {{#if tags}}<link rel="stylesheet" href="../../../../css/bulma-tagsinput.min.css" />{{/if}}
     <style>
-      @import url('https://fonts.googleapis.com/css?family=Cinzel:400,700&subset=latin-ext');
       body {
         font-family: 'Montserrat', sans-serif;
       }
@@ -28,9 +28,11 @@
     </style>
   </head>
   {{{body}}}
-  {{#if tags}}<script src="../../../../js/bulma-tagsinput.min.js"></script>
+{{#if tags}}
+<script src="https://cdn.jsdelivr.net/npm/bulma-tagsinput@2/dist/js/bulma-tagsinput.min.js"></script>
 <script>
   bulmaTagsinput.attach();
 </script>
   {{/if}}
+<script src="https://cdn.jsdelivr.net/npm/bulma-toast@1/dist/bulma-toast.min.js"></script>
 </html>

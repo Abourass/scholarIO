@@ -1,0 +1,525 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "slim-icons";
+  src:url("../fonts/slim-icons.eot");
+  src:url("../fonts/slim-icons.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/slim-icons.woff") format("woff"),
+    url("../fonts/slim-icons.ttf") format("truetype"),
+    url("../fonts/slim-icons.svg#slim-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "slim-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="slim-"]:before,
+[class*=" slim-"]:before {
+  font-family: "slim-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slim-programmer:before {
+  content: "\72";
+}
+.slim-finger-fuck:before {
+  content: "\73";
+}
+.slim-monster:before {
+  content: "\74";
+}
+.slim-boiling:before {
+  content: "\75";
+}
+.slim-dismembrement:before {
+  content: "\76";
+}
+.slim-drug:before {
+  content: "\77";
+}
+.slim-shocked:before {
+  content: "\78";
+}
+.slim-eye-spilling:before {
+  content: "\79";
+}
+.slim-fart:before {
+  content: "\7a";
+}
+.slim-pound:before {
+  content: "\41";
+}
+.slim-bongie:before {
+  content: "\42";
+}
+.slim-skull:before {
+  content: "\43";
+}
+.slim-voodoo:before {
+  content: "\44";
+}
+.slim-lick:before {
+  content: "\45";
+}
+.slim-killer:before {
+  content: "\46";
+}
+.slim-pee:before {
+  content: "\47";
+}
+.slim-poop:before {
+  content: "\48";
+}
+.slim-asterisk:before {
+  content: "\49";
+}
+.slim-hipster:before {
+  content: "\4a";
+}
+.slim-telescope:before {
+  content: "\4b";
+}
+.slim-brain:before {
+  content: "\4c";
+}
+.slim-knight:before {
+  content: "\4d";
+}
+.slim-globe:before {
+  content: "\4e";
+}
+.slim-bed:before {
+  content: "\4f";
+}
+.slim-breakfast-face:before {
+  content: "\50";
+}
+.slim-hippie:before {
+  content: "\51";
+}
+.slim-war:before {
+  content: "\52";
+}
+.slim-009-computer:before {
+  content: "\53";
+}
+.slim-nuclear:before {
+  content: "\54";
+}
+.slim-lumberjack:before {
+  content: "\55";
+}
+.slim-garbage:before {
+  content: "\56";
+}
+.slim-microscope:before {
+  content: "\57";
+}
+.slim-book:before {
+  content: "\58";
+}
+.slim-bookmark:before {
+  content: "\59";
+}
+.slim-bug:before {
+  content: "\5a";
+}
+.slim-heart-1:before {
+  content: "\30";
+}
+.slim-flame:before {
+  content: "\31";
+}
+.slim-gear-1:before {
+  content: "\32";
+}
+.slim-hourglass:before {
+  content: "\33";
+}
+.slim-armchair-chair-streamline:before {
+  content: "\61";
+}
+.slim-arrow-streamline-target:before {
+  content: "\62";
+}
+.slim-backpack-streamline-trekking:before {
+  content: "\63";
+}
+.slim-bag-shopping-streamline:before {
+  content: "\64";
+}
+.slim-barbecue-eat-food-streamline:before {
+  content: "\65";
+}
+.slim-barista-coffee-espresso-streamline:before {
+  content: "\66";
+}
+.slim-book-dowload-streamline:before {
+  content: "\67";
+}
+.slim-book-read-streamline:before {
+  content: "\68";
+}
+.slim-browser-streamline-window:before {
+  content: "\69";
+}
+.slim-brush-paint-streamline:before {
+  content: "\6a";
+}
+.slim-bubble-comment-streamline-talk:before {
+  content: "\6b";
+}
+.slim-bubble-love-streamline-talk:before {
+  content: "\6c";
+}
+.slim-caddie-shop-shopping-streamline:before {
+  content: "\6d";
+}
+.slim-caddie-shopping-streamline:before {
+  content: "\6e";
+}
+.slim-camera-photo-polaroid-streamline:before {
+  content: "\6f";
+}
+.slim-camera-photo-streamline:before {
+  content: "\70";
+}
+.slim-camera-streamline-video:before {
+  content: "\71";
+}
+.slim-clock-streamline-time:before {
+  content: "\34";
+}
+.slim-computer-imac:before {
+  content: "\35";
+}
+.slim-computer-imac-2:before {
+  content: "\36";
+}
+.slim-computer-macintosh-vintage:before {
+  content: "\37";
+}
+.slim-computer-network-streamline:before {
+  content: "\38";
+}
+.slim-computer-streamline:before {
+  content: "\39";
+}
+.slim-cook-pan-pot-streamline:before {
+  content: "\21";
+}
+.slim-crop-streamline:before {
+  content: "\22";
+}
+.slim-dashboard-speed-streamline:before {
+  content: "\23";
+}
+.slim-database-streamline:before {
+  content: "\24";
+}
+.slim-delete-garbage-streamline:before {
+  content: "\25";
+}
+.slim-design-graphic-tablet-streamline-tablet:before {
+  content: "\26";
+}
+.slim-design-pencil-rule-streamline:before {
+  content: "\27";
+}
+.slim-diving-leisure-sea-sport-streamline:before {
+  content: "\28";
+}
+.slim-drug-medecine-streamline-syringue:before {
+  content: "\29";
+}
+.slim-earth-globe-streamline:before {
+  content: "\2a";
+}
+.slim-eat-food-fork-knife-streamline:before {
+  content: "\2b";
+}
+.slim-eat-food-hotdog-streamline:before {
+  content: "\2c";
+}
+.slim-edit-modify-streamline:before {
+  content: "\2d";
+}
+.slim-email-mail-streamline:before {
+  content: "\2e";
+}
+.slim-envellope-mail-streamline:before {
+  content: "\2f";
+}
+.slim-eye-dropper-streamline:before {
+  content: "\3a";
+}
+.slim-factory-lift-streamline-warehouse:before {
+  content: "\3b";
+}
+.slim-first-aid-medecine-shield-streamline:before {
+  content: "\3c";
+}
+.slim-frame-picture-streamline:before {
+  content: "\3d";
+}
+.slim-grid-lines-streamline:before {
+  content: "\3e";
+}
+.slim-handle-streamline-vector:before {
+  content: "\3f";
+}
+.slim-headset-sound-streamline:before {
+  content: "\40";
+}
+.slim-home-house-streamline:before {
+  content: "\5b";
+}
+.slim-ibook-laptop:before {
+  content: "\5d";
+}
+.slim-ink-pen-streamline:before {
+  content: "\5e";
+}
+.slim-ipad-streamline:before {
+  content: "\5f";
+}
+.slim-iphone-streamline:before {
+  content: "\60";
+}
+.slim-ipod-mini-music-streamline:before {
+  content: "\7b";
+}
+.slim-ipod-music-streamline:before {
+  content: "\7c";
+}
+.slim-ipod-streamline:before {
+  content: "\7d";
+}
+.slim-laptop-macbook-streamline:before {
+  content: "\7e";
+}
+.slim-link-streamline:before {
+  content: "\5c";
+}
+.slim-lock-locker-streamline:before {
+  content: "\e000";
+}
+.slim-locker-streamline-unlock:before {
+  content: "\e001";
+}
+.slim-macintosh:before {
+  content: "\e002";
+}
+.slim-magnet-streamline:before {
+  content: "\e003";
+}
+.slim-map-streamline-user:before {
+  content: "\e005";
+}
+.slim-micro-record-streamline:before {
+  content: "\e006";
+}
+.slim-music-note-streamline:before {
+  content: "\e007";
+}
+.slim-music-speaker-streamline:before {
+  content: "\e008";
+}
+.slim-notebook-streamline:before {
+  content: "\e009";
+}
+.slim-paint-bucket-streamline:before {
+  content: "\e00a";
+}
+.slim-painting-roll-streamline:before {
+  content: "\e00b";
+}
+.slim-pen-streamline:before {
+  content: "\e00c";
+}
+.slim-pen-streamline-1:before {
+  content: "\e00d";
+}
+.slim-pen-streamline-2:before {
+  content: "\e00e";
+}
+.slim-pen-streamline-3:before {
+  content: "\e00f";
+}
+.slim-photo-pictures-streamline:before {
+  content: "\e010";
+}
+.slim-picture-streamline:before {
+  content: "\e011";
+}
+.slim-picture-streamline-1:before {
+  content: "\e012";
+}
+.slim-receipt-shopping-streamline:before {
+  content: "\e013";
+}
+.slim-remote-control-streamline:before {
+  content: "\e014";
+}
+.slim-settings-streamline:before {
+  content: "\e015";
+}
+.slim-shoes-snickers-streamline:before {
+  content: "\e016";
+}
+.slim-speech-streamline-talk-user:before {
+  content: "\e017";
+}
+.slim-stamp-streamline:before {
+  content: "\e018";
+}
+.slim-streamline-suitcase-travel:before {
+  content: "\e019";
+}
+.slim-streamline-sync:before {
+  content: "\e01a";
+}
+.slim-streamline-umbrella-weather:before {
+  content: "\e01b";
+}
+.slim-painting-pallet-streamline:before {
+  content: "\e01c";
+}
+.slim-settings-streamline-2:before {
+  content: "\e01d";
+}
+.slim-settings-streamline-1:before {
+  content: "\e01e";
+}
+.slim-happy-smiley-streamline:before {
+  content: "\e01f";
+}
+.slim-magic-magic-wand-streamline:before {
+  content: "\e020";
+}
+.slim-man-people-streamline-user:before {
+  content: "\e004";
+}
+.slim-monocle-mustache-streamline:before {
+  content: "\e021";
+}
+.slim-map-pin-streamline:before {
+  content: "\e022";
+}
+.slim-japan-streamline-tea:before {
+  content: "\e023";
+}
+.slim-like-love-streamline:before {
+  content: "\e024";
+}
+.slim-food-ice-cream-streamline:before {
+  content: "\e025";
+}
+.slim-coffee-streamline:before {
+  content: "\e026";
+}
+.slim-cocktail-mojito-streamline:before {
+  content: "\e027";
+}
+.slim-bomb-bug:before {
+  content: "\e028";
+}
+.slim-chef-food-restaurant-streamline:before {
+  content: "\e029";
+}
+.slim-chaplin-hat-movie-streamline:before {
+  content: "\e02a";
+}
+.slim-danger-death-delete-destroy-skull-stream:before {
+  content: "\e02b";
+}
+.slim-crown-king-streamline:before {
+  content: "\e02c";
+}
+.slim-bag:before {
+  content: "\e02d";
+}
+.slim-clipboard:before {
+  content: "\e037";
+}
+.slim-clock:before {
+  content: "\e038";
+}
+.slim-graph:before {
+  content: "\e041";
+}
+.slim-heart:before {
+  content: "\e042";
+}
+.slim-hierarchy:before {
+  content: "\e043";
+}
+.slim-hierarchy-2:before {
+  content: "\e044";
+}
+.slim-imac:before {
+  content: "\e045";
+}
+.slim-ipad:before {
+  content: "\e046";
+}
+.slim-keyboard:before {
+  content: "\e048";
+}
+.slim-laptop:before {
+  content: "\e049";
+}
+.slim-line:before {
+  content: "\e04a";
+}
+.slim-list:before {
+  content: "\e04b";
+}
+.slim-list-thumbnails:before {
+  content: "\e04c";
+}
+.slim-lock:before {
+  content: "\e04d";
+}
+.slim-magnifier:before {
+  content: "\e04e";
+}
+.slim-moon:before {
+  content: "\e051";
+}
+.slim-pencil:before {
+  content: "\e053";
+}
+.slim-pencil-ruler:before {
+  content: "\e054";
+}
+.slim-picture:before {
+  content: "\e055";
+}
+.slim-rain:before {
+  content: "\e056";
+}
+.slim-ribbon:before {
+  content: "\e057";
+}
+.slim-unlock:before {
+  content: "\e05e";
+}
