@@ -115,7 +115,7 @@ router.get('/records', (req, res, next) => {
   Scholar.find().then(scholar => {
    res.render('scholar/records', {
      scholar: scholar,
-     title: 'SCHOLAR IO'
+     title: 'SCHOLAR IO',
    })
   })
 });
