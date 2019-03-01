@@ -1,0 +1,110 @@
+<style>
+  .is-groovy {
+    background-image: linear-gradient(141deg, #49349a 0%, #6b20dc 71%, #8f32f5 100%);
+  }
+  .is-groovy .title,
+  .is-groovy .subtitle {
+    color: #fbf8f8
+  }
+</style>
+<body class="has-navbar-fixed-top">
+{{> _navigation uploadActive="is-active"}}
+<section class="hero is-small is-groovy">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">
+        Create a Record
+      </h1>
+      <h2 class="subtitle">
+        Build Knowledge
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="container">
+  <br/>
+  <form>
+    <div class="field">
+      <label class="label">Article Title</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Article Title" name="articleTitle">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Edition</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Edition" name="edition">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">DOI</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="DOI" name="doi">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Author(s)</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Author(s)" name="authors">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Publication Title</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Publication Title" name="pubTitle">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Year Published</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Year" name="yearPublished">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Publisher</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Publisher" name="publisher">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Publication Location</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="Publication Location" name="pubLocation">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">ISBN10</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="ISBN10" name="isbn10">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">ISBN13</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="ISBN13" name="isbn13">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Tags</label>
+      <div class="control">
+        <input class="input" type="text" placeholder="tags" name="tags">
+      </div>
+    </div>
+    <div class="field">
+      <label class="label">Description</label>
+      <div class="control">
+        <textarea class="textarea" placeholder="Description"></textarea>
+      </div>
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Submit</button>
+      </div>
+      <div class="control">
+        <button class="button is-text">Cancel</button>
+      </div>
+    </div>
+  </form>
+  <br/>
+</section>
+</body>

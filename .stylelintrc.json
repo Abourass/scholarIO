@@ -1,0 +1,20 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "max-empty-lines": 2,
+    "unit-whitelist": ["px", "em", "rem", "%", "s", "deg", "vh", "vw", "ms"],
+    "media-feature-name-no-unknown": [true, {
+      "ignoreMediaFeatureNames": ["/^prefers-/", "custom"]
+    }],
+    "selector-list-comma-newline-after": "never-multi-line",
+    "comment-empty-line-before": "never",
+    "declaration-block-no-duplicate-properties": [true, {
+      "ignore": ["consecutive-duplicates"]
+    }],
+    "number-leading-zero": "never",
+    "no-descending-specificity": null,
+    "rule-empty-line-before": ["always", {
+      "except": ["after-single-line-comment", "inside-block-and-after-rule", "inside-block", "first-nested"]
+    }]
+  }
+}
