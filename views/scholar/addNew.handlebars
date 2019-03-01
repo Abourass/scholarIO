@@ -14,7 +14,8 @@
 </section>
 <section class="container">
   <br/>
-  <form>
+  <form action="scholar/add" method="post" autocomplete="off">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
     <div class="field">
       <label class="label">Article Title</label>
       <div class="control">
