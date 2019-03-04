@@ -31,11 +31,9 @@ const Counters = require('./schema/Counters');
 const Users = require('./schema/User');
 
 const index = require('./routes/index'); // ========================> Load Routes <===========================================
-
 const keys = require('./config/keys'); // ==========================> Load Keys <=============================================
 
 require('./config/passport')(passport); // =========================> Passport Config <=======================================
-
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true }) // ======> Connect to our Database <===============================
   .then(() => console.log('Connected to mLAb | Database AHOY!')).catch(err => console.log(err));
 function shouldCompress(req, res, next) { // =======================> Compression Middleware <=================================
@@ -47,11 +45,9 @@ app.use(logger('dev')); // =========================================> Initialize
 app.use(bodyParser.urlencoded({ extended: false })); // ============> Body Parser middleware <=================================
 app.use(bodyParser.json());
 app.use(methodOverride('_method')); // =============================> Method Override Middleware <=============================
-// =========================================================> Handlebars Helpers & Middleware <========================
+// =================================================================> Handlebars Helpers & Middleware <========================
 app.engine('.handlebars', exphbs({
-  defaultLayout: 'main',
-  partialsDir: ['./views/partials/'],
-  extname: '.handlebars',
+  defaultLayout: 'main', partialsDir: ['./views/partials/'], extname: '.handlebars',
 }));
 app.set('view engine', 'handlebars');
 const sess = { // ==================================================> Create Session Object for Use <==========================
@@ -83,7 +79,6 @@ function normalizePort(val) { // ------------------------------> Normalize a por
 }
 const port = normalizePort(process.env.PORT || '5000'); // ----> Get port from environment and store in Express <--------------
 app.set('port', port);
-
 const server = http.createServer(app); // ===========================> Create HTTP server. <===================================
 function onListening() { // -----------------------------------> Event listener for HTTP server "listening" event <------------
   const addr = server.address();
