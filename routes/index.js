@@ -79,7 +79,7 @@ router.post('/scholar/add', csrfProtection, (req, res, next) => {
           req.flash('success_msg', `${docTitle} has been recorded, and then absorbed into the greater body of knowledge`);
           res.redirect('../../../../');
         }
-      });
+      }).catch(err => console.log(err));
   } else if (req.body.doi.length <= 0) {
     Book.findOne({articleTitle: req.body.articleTitle})
       .then(book => {
@@ -123,7 +123,7 @@ router.post('/scholar/add', csrfProtection, (req, res, next) => {
           req.flash('success_msg', `${docTitle} has been recorded, and then absorbed into the greater body of knowledge`);
           res.redirect('../../../../');
         }
-      });
+      }).catch(err => console.log(err));
   } else if (req.body.articleTitle.length <= 0) {
     res.render('scholar/addNew', {
       articleTitle: req.body.articleTitle,
@@ -155,7 +155,7 @@ router.get('/records', (req, res, next) => {
         scholar: scholar,
         title: 'SCHOLAR IO',
       });
-    });
+    }).catch(err => console.log(err));
 });
 
 module.exports = router;
