@@ -24,7 +24,8 @@ app.use(bodyParser.urlencoded({ extended: false })); // ============> CSRF Prote
 app.use(cookieParser());
 app.use(csrf({ cookie: true }));
 
-const Scholars = require('./schema/Scholar'); // ==========================> Import Models & Schema <==========================
+const Papers = require('./schema/Paper'); // ==========================> Import Models & Schema <==========================
+const Books = require('./schema/Book');
 const References = require('./schema/Reference');
 const Counters = require('./schema/Counters');
 const Users = require('./schema/User');
@@ -36,8 +37,7 @@ const keys = require('./config/keys'); // ==========================> Load Keys 
 require('./config/passport')(passport); // =========================> Passport Config <=======================================
 
 mongoose.connect(keys.mongoURI, { useNewUrlParser: true }) // ======> Connect to our Database <===============================
-.then(() => console.log('Connected to mLAb | Database AHOY!'))
-.catch(err => console.log(err));
+  .then(() => console.log('Connected to mLAb | Database AHOY!')).catch(err => console.log(err));
 function shouldCompress(req, res, next) { // =======================> Compression Middleware <=================================
   if (req.headers['x-no-compression']) { return false; } // ---> Don't compress responses w/ no-compression header <-----------
   return compression.filter(req, res); // ---------------------> fallback to standard filter function <------------------------
@@ -47,7 +47,7 @@ app.use(logger('dev')); // =========================================> Initialize
 app.use(bodyParser.urlencoded({ extended: false })); // ============> Body Parser middleware <=================================
 app.use(bodyParser.json());
 app.use(methodOverride('_method')); // =============================> Method Override Middleware <=============================
- // =========================================================> Handlebars Helpers & Middleware <========================
+// =========================================================> Handlebars Helpers & Middleware <========================
 app.engine('.handlebars', exphbs({
   defaultLayout: 'main',
   partialsDir: ['./views/partials/'],
@@ -77,7 +77,7 @@ app.use('/', index); // ==============================================> Use Rout
 
 function normalizePort(val) { // ------------------------------> Normalize a port into a number, string, or false. <-----------
   const port = parseInt(val, 10);
-  if (isNaN(port)) { return val; }
+  if (typeof port !== 'number') { return val; }
   if (port >= 0) { return port; }
   return false;
 }

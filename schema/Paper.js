@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // Create Schema
-const ScholarSchema = new Schema({
+const PaperSchema = new Schema({
   articleTitle: {
     type: String,
   },
@@ -39,8 +39,8 @@ const ScholarSchema = new Schema({
   },
   description: {
     type: String,
-  }
+  },
 });
 
 // Create collection and add Schema
-mongoose.model('scholars', ScholarSchema);
+mongoose.model('papers', PaperSchema);
