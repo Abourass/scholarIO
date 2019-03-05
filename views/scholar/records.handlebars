@@ -10,12 +10,31 @@
     </div>
   </div>
 </section>
-<section class="container">
-
-      <pre class="is-family-code" style="max-width: 40%">{{{paper}}}</pre>
-
-      <pre class="is-family-code" style="max-width: 40%">{{{book}}}</pre>
-
+<section class="section">
+  <div class="container has-text-centered">
+    <div class="columns">
+      <div class="column">
+    <h1 class="title">Papers</h1>
+    {{#each paper}}
+      <p>
+        {{articleTitle}}
+      </p>
+      {{edition}}
+      <hr />
+    {{/each}}
+      </div>
+      <div class="column">
+    <h1 class="title">Books</h1>
+    {{#each book}}
+      <p>
+        {{pubTitle}}
+      </p>
+      {{edition}}
+      <hr />
+    {{/each}}
+      </div>
+    </div>
+  </div>
 </section>
 </body>
 
