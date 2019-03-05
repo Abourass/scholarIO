@@ -21,8 +21,13 @@ module.exports = {
   formatUnderscore: function(str) { // This is so we can format string contains underscores from database
     return str.replace(/_/g, ' ');
   },
-  formatComma: function(str) {
-    return str.replace(/,/g, ', ');
+  formatComma: function(array) {
+    const str = JSON.stringify(array);
+    if (str.length > 0) {
+      let formattedStr = str.replace(/,/g, ', ');
+      formattedStr = formattedStr.replace(/[\[\]"]+/g, '');
+      return formattedStr;
+    }
   },
   formatBoolean: function(str) { // This is so we can format Booleans from database
     let readableState;
