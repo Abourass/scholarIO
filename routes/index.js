@@ -149,13 +149,15 @@ router.post('/scholar/add', csrfProtection, (req, res, next) => {
 
 /* GET Records Page */
 router.get('/records', (req, res, next) => {
-  Paper.find()
-    .then(scholar => {
+  Paper.find().then(paper => {
+    Book.find().then(book => {
       res.render('scholar/records', {
-        scholar: scholar,
+        paper: paper,
+        book: book,
         title: 'SCHOLAR IO',
       });
     }).catch(err => console.log(err));
+  });
 });
 
 module.exports = router;
