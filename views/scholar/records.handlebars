@@ -1,7 +1,4 @@
-<style>.is-slim-hr {
-  margin: 0.7rem 0;
-}.documentTitle{    font-size: 1.1rem;
-          text-transform: capitalize;}</style>
+<style>.is-slim-hr { margin: 0.7rem 0; }.documentTitle{font-size: 1.1rem; text-transform: capitalize;}</style>
 <body class="has-navbar-fixed-top">
 {{> _navigation recordsActive="is-active"}}
 <section class="hero is-small is-groovy">
@@ -20,7 +17,7 @@
       <div class="column">
         <h1 class="title">Papers</h1>
         {{#each paper}}
-          <p class="documentTitle">{{articleTitle}}</p>
+          <p class="documentTitle">{{truncate articleTitle 70}}</p>
           <span class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</span>
           <span class="has-text-dark-grey has-text-weight-light is-size-6">{{#if authors}}By: {{formatComma authors}}{{/if}}</span>
           <hr class="is-slim-hr"/>
