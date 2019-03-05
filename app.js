@@ -46,8 +46,14 @@ app.use(bodyParser.urlencoded({ extended: false })); // ============> Body Parse
 app.use(bodyParser.json());
 app.use(methodOverride('_method')); // =============================> Method Override Middleware <=============================
 // =================================================================> Handlebars Helpers & Middleware <========================
+const {truncate, formatDateBasic, formatDate, relativeTime, formatUnderscore, formatComma, formatBoolean, formatErrorArray, handyString, curTime, contains} = require('./helpers/hbs');
 app.engine('.handlebars', exphbs({
-  defaultLayout: 'main', partialsDir: ['./views/partials/'], extname: '.handlebars',
+  helpers: {
+    truncate: truncate, formatDateBasic: formatDateBasic, formatDate: formatDate, relativeTime: relativeTime, formatUnderscore: formatUnderscore, formatComma: formatComma, formatBoolean: formatBoolean, formatErrorArray: formatErrorArray, handyString: handyString, curTime: curTime, contains: contains,
+  },
+  defaultLayout: 'main',
+  partialsDir: ['./views/partials/'],
+  extname: '.handlebars',
 }));
 app.set('view engine', 'handlebars');
 const sess = { // ==================================================> Create Session Object for Use <==========================
