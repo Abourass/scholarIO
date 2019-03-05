@@ -1,6 +1,6 @@
 <style>.is-slim-hr {
   margin: 0.7rem 0;
-}</style>
+}.documentTitle{font-size: 1.2rem}</style>
 <body class="has-navbar-fixed-top">
 {{> _navigation recordsActive="is-active"}}
 <section class="hero is-small is-groovy">
@@ -19,10 +19,8 @@
       <div class="column">
         <h1 class="title">Papers</h1>
         {{#each paper}}
-          <p>
-            {{articleTitle}}
-          </p>
-          <p class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</p>
+          <p class="documentTitle">{{articleTitle}}</p>
+          <span class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</span>
           <span class="has-text-dark-grey has-text-weight-light is-size-6">{{#if authors}}By: {{formatComma authors}}{{/if}}</span>
           <hr class="is-slim-hr"/>
         {{/each}}
@@ -30,9 +28,7 @@
       <div class="column">
         <h1 class="title">Books</h1>
         {{#each book}}
-          <p>
-            {{articleTitle}}{{pubTitle}}
-          </p>
+          <p class="documentTitle">{{articleTitle}}{{pubTitle}}</p>
           <p class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</p>
           <span class="has-text-dark-grey has-text-weight-light is-size-6">{{#if authors}}By: {{formatComma authors}}{{/if}}</span>
           <hr class="is-slim-hr"/>
