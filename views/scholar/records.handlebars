@@ -1,3 +1,4 @@
+<style>.is-slim-hr{margin: 0.7rem 0;}</style>
 <body class="has-navbar-fixed-top">
 {{> _navigation recordsActive="is-active"}}
 <section class="hero is-small is-groovy">
@@ -19,8 +20,9 @@
       <p>
         {{articleTitle}}
       </p>
-      {{edition}}
-      <hr />
+      <p class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</p>
+      <span class="has-text-dark-grey has-text-weight-light is-size-6">Authors: {{authors}}</span>
+      <hr class="is-slim-hr" />
     {{/each}}
       </div>
       <div class="column">
@@ -29,8 +31,9 @@
       <p>
         {{articleTitle}}{{pubTitle}}
       </p>
-      {{edition}}
-      <hr />
+      <p class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</p>
+      <span class="has-text-dark-grey has-text-weight-light is-size-6">Authors: {{authors}}</span>
+      <hr class="is-slim-hr" />
     {{/each}}
       </div>
     </div>
