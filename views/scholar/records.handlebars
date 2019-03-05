@@ -1,4 +1,6 @@
-<style>.is-slim-hr{margin: 0.7rem 0;}</style>
+<style>.is-slim-hr {
+  margin: 0.7rem 0;
+}</style>
 <body class="has-navbar-fixed-top">
 {{> _navigation recordsActive="is-active"}}
 <section class="hero is-small is-groovy">
@@ -15,26 +17,26 @@
   <div class="container has-text-centered">
     <div class="columns">
       <div class="column">
-    <h1 class="title">Papers</h1>
-    {{#each paper}}
-      <p>
-        {{articleTitle}}
-      </p>
-      <p class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</p>
-      <span class="has-text-dark-grey has-text-weight-light is-size-6">Author(s): {{authors}}</span>
-      <hr class="is-slim-hr" />
-    {{/each}}
+        <h1 class="title">Papers</h1>
+        {{#each paper}}
+          <p>
+            {{articleTitle}}
+          </p>
+          <p class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</p>
+          <span class="has-text-dark-grey has-text-weight-light is-size-6">Author(s): {{authors}}</span>
+          <hr class="is-slim-hr"/>
+        {{/each}}
       </div>
       <div class="column">
-    <h1 class="title">Books</h1>
-    {{#each book}}
-      <p>
-        {{articleTitle}}{{pubTitle}}
-      </p>
-      <p class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</p>
-      <span class="has-text-dark-grey has-text-weight-light is-size-6">Authors: {{authors}}</span>
-      <hr class="is-slim-hr" />
-    {{/each}}
+        <h1 class="title">Books</h1>
+        {{#each book}}
+          <p>
+            {{articleTitle}}{{pubTitle}}
+          </p>
+          <p class="has-text-dark-grey has-text-weight-light is-size-6">{{edition}}</p>
+          <span class="has-text-dark-grey has-text-weight-light is-size-6">Authors: {{authors}}</span>
+          <hr class="is-slim-hr"/>
+        {{/each}}
       </div>
     </div>
   </div>
