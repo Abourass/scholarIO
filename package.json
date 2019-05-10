@@ -1,10 +1,14 @@
 {
   "name": "scholargenerator",
   "version": "0.0.1",
-  "main": "app.js",
+  "main": "./config/server.js",
+  "engines": {
+    "node": "10.15.3"
+  },
   "scripts": {
-    "start": "node app.js",
-    "nodemon development": "npx nodemon %NODE_DEBUG_OPTION%"
+    "start": "cross-env NODE_ENV=development DEBUG=scholar:server nodemon ./config/server.js",
+    "nodemonProd": "cross-env NODE_ENV=production nodemon ./config/server.js",
+    "prod": "pm2-runtime start ecosystem.config.js --env production"
   },
   "author": "Abourass <abourassa@assetval.com>",
   "license": "Private",
@@ -15,8 +19,10 @@
     "connect-flash": "^0.1.1",
     "connect-mongo": "^2.0.3",
     "cookie-parser": "^1.4.4",
+    "cross-env": "5.2.0",
     "csurf": "^1.9.0",
     "debug": "^4.1.1",
+    "dotenv": "8.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.1",
     "express-session": "^1.15.6",
@@ -29,61 +35,114 @@
     "mongoose": "^5.4.15",
     "morgan": "^1.9.1",
     "multer": "^1.4.1",
-    "nodemailer": "^5.1.1",
+    "nodemailer": "6.1.1",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "pm2": "3.5.0",
+    "rotating-file-stream": "1.4.1"
   },
   "devDependencies": {
+    "@getify/eslint-plugin-proper-ternary": "^3.0.1",
     "@types/express": "^4.16.1",
     "chai": "^4.2.0",
-    "eslint": "^5.14.1",
+    "eslint": "5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-node": "^8.0.1",
+    "eslint-import-resolver-node": "0.3.2",
+    "eslint-plugin-import": "2.17.2",
+    "eslint-plugin-node": "9.0.1",
     "eslint-plugin-security": "^1.4.0",
-    "google-closure-compiler": "^20190215.0.1",
-    "mocha": "^6.0.1",
-    "nodemon": "^1.18.10",
-    "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0"
+    "google-closure-compiler": "20190415.0.0",
+    "mocha": "6.1.4",
+    "nodemon": "1.19.0",
+    "stylelint": "10.0.1",
+    "stylelint-config-standard": "18.3.0",
+    "stylelint-scss": "3.6.1"
   },
   "eslintConfig": {
     "plugins": [
-      "security"
+      "node",
+      "security",
+      "@getify/proper-ternary"
     ],
     "extends": [
       "airbnb-base",
       "plugin:node/recommended",
-      "plugin:security/recommended"
+      "plugin:security/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:@getify/proper-ternary/getify-says"
     ],
     "env": {
       "shared-node-browser": true,
       "node": true,
       "es6": true,
       "mongo": true,
-      "jquery": true,
-      "jest": true
+      "jquery": true
     },
     "rules": {
       "arrow-parens": [
         "error",
-        "as-needed"
+        "as-needed",
+        {
+          "requireForBlockBody": true
+        }
       ],
-      "yoda": 0,
-      "no-unused-vars": 0,
-      "one-var": 0,
-      "one-var-declaration-per-line": 0,
-      "consistent-return": 0,
-      "linebreak-style": 0,
-      "eqeqeq": 0,
-      "func-names": 0,
-      "import/newline-after-import": 0,
-      "max-len": 0,
-      "no-console": 0,
-      "no-lonely-if": 0,
-      "no-new-object": [
-        "error"
+      "no-unused-vars": "off",
+      "one-var": [
+        "error",
+        {
+          "var": "consecutive",
+          "let": "consecutive",
+          "const": "never"
+        }
       ],
+      "one-var-declaration-per-line": "off",
+      "consistent-return": "off",
+      "func-names": [
+        "error",
+        "as-needed",
+        {
+          "generators": "as-needed"
+        }
+      ],
+      "max-len": "off",
+      "no-unused-expressions": "off",
+      "no-console": "off",
+      "no-shadow": [
+        "error",
+        {
+          "hoist": "never",
+          "allow": [
+            "done",
+            "resolve",
+            "err",
+            "error",
+            "cb",
+            "User",
+            "user",
+            "issue"
+          ]
+        }
+      ],
+      "no-param-reassign": [
+        "error",
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": [
+            "realtor",
+            "tempRealtor",
+            "counters",
+            "user",
+            "selectedUser",
+            "client",
+            "employee",
+            "issue",
+            "res"
+          ]
+        }
+      ],
+      "no-lonely-if": "error",
+      "no-new-object": "error",
       "object-curly-newline": [
         "error",
         {
@@ -92,20 +151,90 @@
           }
         }
       ],
-      "no-param-reassign": 0,
-      "no-plusplus": 0,
-      "no-restricted-properties": 0,
-      "no-shadow": 0,
-      "no-underscore-dangle": 0,
-      "no-void": 0,
-      "object-curly-spacing": 0,
+      "no-underscore-dangle": "off",
+      "object-curly-spacing": [
+        "error",
+        "never"
+      ],
       "object-shorthand": [
         "error",
         "consistent"
       ],
-      "prefer-destructuring": 0,
-      "space-before-blocks": 0,
-      "space-before-function-paren": 0
+      "prefer-destructuring": "off",
+      "space-before-blocks": "off",
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "prefer-rest-params": "off",
+      "import/newline-after-import": "off"
     }
-  }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "rules": {
+      "font-family-no-missing-generic-family-keyword": false,
+      "max-empty-lines": 2,
+      "unit-whitelist": [
+        "px",
+        "em",
+        "rem",
+        "%",
+        "s",
+        "deg",
+        "vh",
+        "vw",
+        "ms"
+      ],
+      "media-feature-name-no-unknown": [
+        true,
+        {
+          "ignoreMediaFeatureNames": [
+            "/^prefers-/",
+            "custom"
+          ]
+        }
+      ],
+      "selector-list-comma-newline-after": "never-multi-line",
+      "comment-empty-line-before": "never",
+      "declaration-block-no-duplicate-properties": [
+        true,
+        {
+          "ignore": [
+            "consecutive-duplicates"
+          ]
+        }
+      ],
+      "number-leading-zero": "never",
+      "no-descending-specificity": null,
+      "rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "after-single-line-comment",
+            "inside-block-and-after-rule",
+            "inside-block",
+            "first-nested"
+          ]
+        }
+      ]
+    }
+  },
+  "nodemonConfig": {
+    "events": {
+      "start": "cls || clear"
+    },
+    "ignore": [
+      "log/"
+    ]
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "not ie <= 8",
+    "not dead"
+  ]
 }

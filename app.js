@@ -1,3 +1,6 @@
+'use strict';
+
+const createError = require('http-errors');
 const compression = require('compression');
 const express = require('express');
 const cookieParser = require('cookie-parser');
@@ -13,16 +16,27 @@ const MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
 const flash = require('connect-flash');
 const methodOverride = require('method-override');
-const logger = require('morgan');
 const debug = require('debug')('scholar:server');
 const ip = require('ip');
-
+const fs = require('fs');
+const logger = require('morgan');
+const rfs = require('rotating-file-stream');
+require('dotenv').config();
 const app = express(); // ==========================================> Initialize Express <====================================
+const env = process.env.NODE_ENV || 'development'; // ==============> Discover environment we are working in <================
+const logDirectory = path.join(__dirname, 'log'); // ===============> Log Folder for development runs <=======================
+
+if (env === 'development') { // ====================================> If in dev create log files locally <====================
+  fs.existsSync('./log') || fs.mkdirSync('./log');
+  // create a rotating write stream - 1d means 1 day (I.E. rotates daily)
+  const accessLogStream = rfs('access.log', {interval: '1d', path: logDirectory});
+  app.use(logger(':remote-user AT :remote-addr [:date[clf]] | USING HTTP/:http-version :method :url RETURNED :status FROM :referrer BROWSER WAS :user-agent | THIS TOOK :response-time[digits] MS', {stream: accessLogStream}));
+}
 
 app.use(helmet()); // ==============================================> Helmet middleware <=====================================
-app.use(bodyParser.urlencoded({ extended: false })); // ============> CSRF Protection <=======================================
+app.use(bodyParser.urlencoded({extended: false})); // ============> CSRF Protection <=======================================
 app.use(cookieParser());
-app.use(csrf({ cookie: true }));
+app.use(csrf({cookie: true}));
 
 const Papers = require('./schema/Paper'); // ==========================> Import Models & Schema <==========================
 const Books = require('./schema/Book');
@@ -31,18 +45,20 @@ const Counters = require('./schema/Counters');
 const Users = require('./schema/User');
 
 const index = require('./routes/index'); // ========================> Load Routes <===========================================
-const keys = require('./config/keys'); // ==========================> Load Keys <=============================================
 
 require('./config/passport')(passport); // =========================> Passport Config <=======================================
-mongoose.connect(keys.mongoURI, { useNewUrlParser: true }) // ======> Connect to our Database <===============================
-  .then(() => console.log('Connected to mLAb | Database AHOY!')).catch(err => console.log(err));
+mongoose.connect(process.env.mongoURI, {useNewUrlParser: true}) // ======> Connect to our Database <===============================
+  .then(() => console.log('Connected to mLAb | Database AHOY!')).catch(err => debug(err));
 function shouldCompress(req, res, next) { // =======================> Compression Middleware <=================================
   if (req.headers['x-no-compression']) { return false; } // ---> Don't compress responses w/ no-compression header <-----------
   return compression.filter(req, res); // ---------------------> fallback to standard filter function <------------------------
 }
-app.use(compression({ filter: shouldCompress })); // ----------> Compress all responses <--------------------------------------
-app.use(logger('dev')); // =========================================> Initialize the logger in Morgan <========================
-app.use(bodyParser.urlencoded({ extended: false })); // ============> Body Parser middleware <=================================
+app.use(compression({threshold: 0, filter: shouldCompress})); // ----------> Compress all responses <--------------------------------------
+app.use(logger('dev', { // =======================================> Log Errors to console.error via debug <===================
+  skip: function(req, res) { return res.statusCode < 400; },
+  stream: {write: msg => debug(msg)},
+}));
+app.use(bodyParser.urlencoded({extended: false})); // ============> Body Parser middleware <=================================
 app.use(bodyParser.json());
 app.use(methodOverride('_method')); // =============================> Method Override Middleware <=============================
 // =================================================================> Handlebars Helpers & Middleware <========================
@@ -61,8 +77,8 @@ const sess = { // ==================================================> Create Ses
   name: 'scholarKittyWhatDoYouKnowAboutThat',
   resave: false,
   saveUninitialized: false,
-  store: new MongoStore({ mongooseConnection: mongoose.connection }),
-  cookie: { path: '/', httpOnly: true, secure: 'auto', maxAge: 60000 * 60 * 24 },
+  store: new MongoStore({mongooseConnection: mongoose.connection}),
+  cookie: {path: '/', httpOnly: true, secure: 'auto', maxAge: 60000 * 60 * 24},
 };
 app.use(session(sess)); // =========================================> Express session middleware <=============================
 app.use(passport.initialize()); // =================================> Passport middleware <====================================
@@ -72,26 +88,10 @@ app.use((req, res, next) => { // ===================================> Set Global
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
   res.locals.user = req.user || null;
+  res.locals.scholarVersion = process.env.VERSION;
   next();
 });
-app.use(express.static(path.join(__dirname, 'public'))); // ==========> Set static folders <===================================
+app.use(express.static(path.join(__dirname, 'public'), {maxAge: '30 days'})); // ==========> Set static folders <==============
 app.use('/', index); // ==============================================> Use Routes <===========================================
 
-function normalizePort(val) { // ------------------------------> Normalize a port into a number, string, or false. <-----------
-  const port = parseInt(val, 10);
-  if (typeof port !== 'number') { return val; }
-  if (port >= 0) { return port; }
-  return false;
-}
-const port = normalizePort(process.env.PORT || '5000'); // ----> Get port from environment and store in Express <--------------
-app.set('port', port);
-const server = http.createServer(app); // ===========================> Create HTTP server. <===================================
-function onListening() { // -----------------------------------> Event listener for HTTP server "listening" event <------------
-  const addr = server.address();
-  const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
-  console.log(`Running on http://${ip.address()}:${port} | You know what to do ♥`);
-  debug(`Development run on http://${ip.address()}:${port} | You know what to do ♥`);
-}
-server.listen(port); // ---------------------------------------> Listen on provided port <--------------------------------------
-server.on('listening', onListening);
 module.exports = app;
