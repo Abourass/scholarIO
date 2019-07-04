@@ -8,7 +8,9 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development DEBUG=scholar:server nodemon ./config/server.js",
     "nodemonProd": "cross-env NODE_ENV=production nodemon ./config/server.js",
-    "prod": "pm2-runtime start ecosystem.config.js --env production"
+    "prod": "pm2-runtime start ecosystem.config.js --env production",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Abourass <abourassa@assetval.com>",
   "license": "Private",
@@ -39,7 +41,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "pm2": "3.5.0",
-    "rotating-file-stream": "1.4.1"
+    "rotating-file-stream": "1.4.1",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
     "@getify/eslint-plugin-proper-ternary": "^3.0.1",
@@ -236,5 +239,6 @@
     "> 1%",
     "not ie <= 8",
     "not dead"
-  ]
+  ],
+  "snyk": true
 }
