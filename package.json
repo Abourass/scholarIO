@@ -40,7 +40,7 @@
     "nodemailer": "^6.3.0",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "snyk": "^1.290.1",
+    "snyk": "^1.316.1",
     "pm2": "^3.5.1",
     "rotating-file-stream": "^1.4.3"
   },
