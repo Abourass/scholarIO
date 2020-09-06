@@ -38,7 +38,7 @@ router.get('/scholar/retry', csrfProtection, (req, res, next) => {
 router.post('/scholar/add', csrfProtection, (req, res, next) => {
   if (req.body.doi.length > 0) {
     Paper.findOne({doi: req.body.doi})
-      .then(paper => {
+      .then((paper) => {
         if (paper) {
           res.render('scholar/addNew', {
             articleTitle: req.body.articleTitle,
@@ -82,7 +82,7 @@ router.post('/scholar/add', csrfProtection, (req, res, next) => {
       }).catch(err => console.log(err));
   } else if (req.body.doi.length <= 0) {
     Book.findOne({articleTitle: req.body.articleTitle})
-      .then(book => {
+      .then((book) => {
         if (book) {
           res.render('scholar/addNew', {
             articleTitle: req.body.articleTitle,
@@ -149,8 +149,8 @@ router.post('/scholar/add', csrfProtection, (req, res, next) => {
 
 /* GET Records Page */
 router.get('/records', (req, res, next) => {
-  Paper.find().then(paper => {
-    Book.find().then(book => {
+  Paper.find().lean().then((paper) => {
+    Book.find().lean().then((book) => {
       res.render('scholar/records', {
         paper: paper,
         book: book,
